@@ -44,6 +44,14 @@ function optionsframework_rolescheck () {
 	}
 }
 
+/* Loads the file for option backup */
+
+add_action('init', 'optionsframework_load_backup' );
+
+function optionsframework_load_backup() {
+    require_once dirname( __FILE__ ) . '/options-backup.php';
+}
+
 /* Loads the file for option sanitization */
 
 add_action('init', 'optionsframework_load_sanitization' );
@@ -99,6 +107,11 @@ function optionsframework_init() {
 	
 	// Change the capability required to save the 'optionsframework' options group.
 	add_filter( 'option_page_capability_optionsframework', 'optionsframework_page_capability' );
+	
+	//Load Import/Export settings
+	if (!isset( $_POST['OptionsFramework-backup-import'] )) {
+		register_setting( 'optionsframework', $option_name, 'optionsframework_validate' );
+	}	
 }
 
 /**
