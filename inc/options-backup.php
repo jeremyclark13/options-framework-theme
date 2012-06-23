@@ -162,7 +162,7 @@ class OptionsFramework_Backup {
 		  '<p>' . __( 'To create a backup, simply select the setting type you\'d like to backup (or "All Settings") and hit the "Download Export File" button.' ) . '</p>' .
 		  '<p>' . __( 'To restore your settings from a backup, browse your computer for the file (under the "Import Settings" heading) and hit the "Upload File and Import" button. This will restore only the settings that have changed since the backup.' ) . '</p>' .
 		  
-		  '<p><strong>' . __( 'Please note that only valid backup files generated through the OptionsFramework Backup Manager should be imported.' ) . '</strong></p>' .
+		  '<p><strong>' . __( 'Please note that only valid backup files generated through the OptionsFramework Backup Manager should be imported.' ) . '</strong></p>';
 
 		} // End IF Statement
 		
